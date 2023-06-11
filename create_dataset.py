@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import os
 import csv
 import time
 import pytz
@@ -12,6 +13,7 @@ def collect_data(interval, duration):
         jakarta_timezone = pytz.timezone('Asia/Jakarta')
         current_time = datetime.now(tz=jakarta_timezone)
         current_time_str = current_time.strftime('%Y-%m-%d %H:%M:%S')
+        os.system("echo '\a'")
         print(f"Current time in Jakarta: {current_time_str}")
         x = input("Enter the x value: ")
         y = input("Enter the y value: ")
